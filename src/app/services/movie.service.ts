@@ -33,13 +33,15 @@ export class MovieService {
 
    //Remove favourite movie from database
    removeMovie(movie) {
-    return this.http.delete(App.apiUrl+"movies", movie)
+     debugger
+    return this.http.delete(App.apiUrl+"movies/"+movie.id, { headers: this.headers })
      .map(data => data.json(),
    (error: any)=>this.handleError(error));
   }
 
   //Show favourite movies from database
   showFav() {
+    debugger
     return this.http.get(App.apiUrl+"movies")
      .map(data => data.json(),
    (error: any)=>this.handleError(error));
