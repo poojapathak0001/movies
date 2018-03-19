@@ -1,9 +1,17 @@
-<nav>
-	<li>
-		<a routerLink="/movies">Home</a>
-	</li>
-	<li>
-		<a routerLink="/favorite">Favorite</a>
-	</li>
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+	<a class="navbar-brand" href="#!">MovieBiz</a>
+  <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarTogglerDemo01" aria-label="Toggle navigation" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
+    <ul class="navbar-nav mr-0 mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/movies">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/favorite">Favourite</a>
+      </li>
+    </ul>
+  </div>
 </nav>
 <router-outlet></router-outlet>

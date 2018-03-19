@@ -1,0 +1,10 @@
+* {
+	color: white;
+}
+
+#wrapper {
+	background: url("../../../assets/movie.jpg");
+	background-blend-mode: luminosity;
+	background-size: auto 500px ;
+	height: 500px;
+}

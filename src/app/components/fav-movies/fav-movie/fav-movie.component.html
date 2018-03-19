@@ -1,3 +1,55 @@
-<h2> Movie Id : {{movie.id}}</h2>
-<h2> Movie Title : {{movie.title}}</h2>
-<button type="button" (click)="removeMovie(movie)">Remove from Favourite</button>
+<div class="card">
+		<div class="card-header">
+			<h4 class="card-title">{{movie.title}}</h4>
+		</div>
+	  <img class="card-img-top float-center mx-auto d-block " id="card-img" alt="Card image cap" src="{{baseUrl}}{{movie.poster_path}}">
+	  <div class="card-body">
+	    
+	    <div class="card-header" id="detail">
+	      <h5 class="mb-0">
+	        <button class="btn btn-link" data-toggle="collapse" data-target=".collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          Details
+	        </button>
+	      </h5>
+	    </div>
+
+	    	 <div  class="collapse collapseOne show" aria-labelledby="detail" data-parent="#accordion">
+		      <div class="card-body">
+		        <table class="table table-hover table-striped">
+				  <tbody>
+				    <tr>
+				      <th scope="row">Date of release</th>
+				      <td>{{movie.release_date}}</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Original Title</th>
+				      <td>{{movie.original_title}}</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">Rating</th>
+				      <td>{{movie.vote_average}}</td>
+				    </tr>
+				  </tbody>
+				</table>
+		      </div>
+		    </div>
+
+	    <div class="card-header" id="overview">
+	      <h5 class="mb-0">
+	        <button class="btn btn-link" data-toggle="collapse" data-target=".collapsetwo" aria-expanded="true" aria-controls="collapsetwo">
+	          Plot
+	        </button>
+	      </h5>
+	    </div>
+
+	    <div class="collapse collapsetwo show" aria-labelledby="overview" data-parent="#accordion">
+	      <div class="card-body">
+	        {{movie.overview}}
+	      </div>
+	    </div>
+
+	 <div class="card-footer text-muted">
+	    <button type="button" (click)="removeMovie(movie)">Remove from Favourite</button>
+	 </div>
+	</div>
+</div>

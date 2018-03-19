@@ -1,5 +1,8 @@
-<<form  method="get" >
-	<input type="text" placeholder="Enter text to search" [(ngModel)]="searchedText" name="search">
+<div class="row justify-content-center">
+<form class="form-inline">
+  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+    <input class="form-control" type="text" placeholder="Enter text to search" [(ngModel)]="searchedText" name="search">
+  </div>
+<button type="button" class="btn btn-shadow btn-outline-success" (click)="searchMovie()">Search</button>
 </form>
-
-<button type="button" (click)="searchMovie()">Search</button>
+</div>

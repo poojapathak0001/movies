@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { MovieService } from '../../../services/movie.service';
 
+
+import { TMDB } from '../../../configs/tmdb.config';
 @Component({
   selector: 'app-fav-movie',
   templateUrl: './fav-movie.component.html',
@@ -11,6 +13,8 @@ import { MovieService } from '../../../services/movie.service';
 export class FavMovieComponent implements OnInit {
 
   @Input() movie: any;
+
+   baseUrl = TMDB.baseUrl;
 
   constructor(private movieService: MovieService) { }
 

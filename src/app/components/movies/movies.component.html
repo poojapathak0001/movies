@@ -1,2 +1,15 @@
-<app-movie-search (success)="setMovielist($event)"></app-movie-search>
+<div class="jumbotron justify-content-center align-items-end" id="wrapper">
+	<div id=main class="py-5 text-center section-fade-in-out" >
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-3 text-capitalize">MovieBiz</h1>
+          <p class="lead text-muted">All your movies, one click away.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+	<app-movie-search  (success)="setMovielist($event)"></app-movie-search>
+	
+</div>
 <app-movie-list [movies]="movies"></app-movie-list>

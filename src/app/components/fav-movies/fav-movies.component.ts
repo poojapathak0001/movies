@@ -10,6 +10,7 @@ import { MovieService } from '../../services/movie.service';
 export class FavMoviesComponent implements OnInit {
 
   public movies = [];
+ 
   constructor( private movieService : MovieService ) {
  	}
 
